@@ -1,0 +1,55 @@
+﻿@model Forms.Models.UserProfile
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+    
+    <label for="FirstName">First Name:</label>
+    <input asp-for="FirstName" />
+    <span asp-validation-for="FirstName"></span>
+    <br />
+
+    <label for="LastName">Last Name:</label>
+    <input asp-for="LastName" />
+    <span asp-validation-for="LastName"></span>
+    <br />
+
+    <label for="EmailAddress">Email Address:</label>
+    <input asp-for="EmailAddress" />
+    <span asp-validation-for="EmailAddress"></span>
+    <br />
+
+    <label for="Password">Password:</label>
+    <input asp-for="Password" type="password" />
+    <span asp-validation-for="Password"></span>
+    <br />
+
+    <label for="ConfirmPassword">Confirm Password:</label>
+    <input asp-for="ConfirmPassword" type="password" />
+    <span asp-validation-for="ConfirmPassword"></span>
+    <br />
+
+    <label for="PhoneNumber">Phone Number:</label>
+    <input asp-for="PhoneNumber" />
+    <span asp-validation-for="PhoneNumber"></span>
+    <br />
+
+    <label for="Age">Age:</label>
+    <input asp-for="Age" type="number" />
+    <span asp-validation-for="Age"></span>
+    <br />
+
+    <label for="City">City:</label>
+    <select asp-for="City">
+        <option value="">--Select--</option>
+        <option value="NewYork">New York</option>
+        <option value="LosAngeles">Los Angeles</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Houston">Houston</option>
+        <option value="Miami">Miami</option>
+    </select>
+    <span asp-validation-for="City"></span>
+    <br />
+
+    <button type="submit">Register</button>
+    <button type="reset">Clear</button>
+</form>
